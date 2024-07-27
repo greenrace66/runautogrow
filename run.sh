@@ -2,7 +2,7 @@
 
 # 1. Install required packages
 pip install rdkit func_timeout
-
+sudo apt install jq- y
 # 2. Clone autogrow4 repository
 git clone https://github.com/durrantlab/autogrow4.git
 
@@ -39,9 +39,9 @@ for file in *.json; do
   filename=$(basename "$file" ".json")
   filepath="./source_compounds/$filename.smi"
   jq ".filename_of_receptor = \"/workspaces/autogrow4/3n7hpreped.pdb\"" "$file" > temp.json && mv temp.json "$file"
-  jq ".center_x = 12.67" "$file" > temp.json && mv temp.json "$file"
-  jq ".center_y = 10.27" "$file" > temp.json && mv temp.json "$file"
-  jq ".center_z = 15.26" "$file" > temp.json && mv temp.json "$file"
+  jq ".center_x = 21.25" "$file" > temp.json && mv temp.json "$file"
+  jq ".center_y = 3.14" "$file" > temp.json && mv temp.json "$file"
+  jq ".center_z = 9.69" "$file" > temp.json && mv temp.json "$file"
   jq ".size_x = 30" "$file" > temp.json && mv temp.json "$file"
   jq ".size_y = 30" "$file" > temp.json && mv temp.json "$file"
   jq ".size_z = 30" "$file" > temp.json && mv temp.json "$file"
